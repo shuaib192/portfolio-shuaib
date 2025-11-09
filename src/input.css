@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Roboto', sans-serif;
+        cursor: none;
+    }
+    h1, h2, h3 {
+        font-family: 'Orbitron', sans-serif;
+    }
+    a, button {
+        cursor: none;
+    }
+}
+
+#background-container {
+    background-image: url('https://lh3.googleusercontent.com/a/ACg8ocIYrKL7vOYwPLRW35lb675PfSKsmauC4ls9j0fsQ--H18Xr_KU=s576-c-no');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #06b6d4; /* cyan-500 */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+#cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #06b6d4; /* cyan-500 */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, border-color 0.2s;
+}
